@@ -1,0 +1,50 @@
+/*公共样式表*/
+
+
+/*清除浮动类*/
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {
+    zoom: 1;
+}
+
+/*基础字体类*/
+.common-text {
+    font-size: 13px;
+    color: #333; 
+}
+
+/*小标题类*/
+.sub-title {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.white-bg {
+    background-color: #fff;
+}
+
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.fa-star {
+    color: orange;
+}
+
+/*按钮*/
+.btn {
+    margin-right: 10px;
+    padding: 5px 50px;
+    border: 1px solid orange;
+    background: orange;
+    color: #fff;
+    border-radius: 60px;
+}

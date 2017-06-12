@@ -4,9 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import axios from 'axios'
+import DataFlow from '@/publics/DataFlow.js'
 
-Vue.$axios = axios
 Vue.config.productionTip = false
+Vue.prototype.dataFlow = DataFlow
 
 /* eslint-disable no-new */
 new Vue({

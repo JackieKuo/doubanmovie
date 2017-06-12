@@ -1,0 +1,24 @@
+/*布局样式*/
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+}
+
+.top-menu {
+    width: 100%;
+    height: 5%;
+    min-height: 30px;
+    max-height: 35px;
+}
+
+.container {
+    width: 100%;
+    height: 95%;
+}
+

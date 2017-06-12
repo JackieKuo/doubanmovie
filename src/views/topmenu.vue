@@ -1,28 +1,48 @@
 <template>
-    <div class="header">
-        <div class="left"><i class="fa fa-bars" aria-hidden="true"></i></div>
+    <div class="top-menu common-text clearfix">
+        <div class="left"><a href="javascript:;" @click.stop.prevent="change"><i class="fa fa-bars" aria-hidden="true"></i></a></router-link></div>
         <div class="medium">豆瓣电影</div>
-        <div class="right"><i class="fa fa-user" aria-hidden="true"></i></div>
+        <div class="right">
+            <router-link to="/login"><i class="fa fa-user" aria-hidden="true"></i></router-link>
+        </div>
     </div>
 </template>
 
 <script>
-    export default {}
+    import dataFlow from '@/publics/DataFlow.js'
+    export default {
+        data () {
+            return {
+
+            }
+        },
+        methods: {
+            change () {
+                dataFlow.$emit('toggleMainMenu')
+            }
+        }
+    }
 </script>
 
 <style scoped>
-    .header {
-        width: 100%;
-        height: 90px;
-        background: #333;
-        line-height: 90px;
+    .top-menu {
+        background-color: #333;
+        color: #fff;
+        line-height: 30px;
+        position: relative;
+        z-index: 9999;
     }
     .left {
         float: left;
         width: 35%;
+        text-align: left;
     }
     .left i {
-        margin-left: 30px;
+        margin-left: 10%;
+    }
+    .left a {
+        color: #fff;
+        
     }
     .medium {
         float: left;
@@ -31,11 +51,13 @@
     }
     .right {
         float: right;
-        color: #ccc;
         width: 35%;
         text-align: right;
     }
+    .right a {
+        color: #ccc;
+    }
     .right i {
-        padding-right: 30px;
+        margin-right: 10%;;
     }
 </style>

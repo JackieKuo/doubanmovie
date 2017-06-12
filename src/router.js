@@ -4,26 +4,41 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 //导入组件
-import Index from './views/index'
-import Billboard from './views/billboard'
-import Recommanded from './views/recommanded'
+import Billboard from './views/Billboard'
+import Hot from './views/Hot'
+import Movie from './views/Movie'
+import Celebrity from './views/Celebrity'
+import Login from './views/login'
+import InTheater from './views/InTheater'
+import ComingSoon from './views/ComingSoon'
+import Top250 from './views/Top250'
+import UsBox from './views/UsBox'
 
 //定义路由
 var routes = [
     {
         path: '/',
-        redirect: { path: '/index' }
+        redirect: { path: '/billboard/hot' }
     },
     { 
-        path: '/index', component: Index,
+        path: '/billboard', component: Billboard,
         children: [
-            {
-                path: '', component: Billboard,
-                children: [
-                    { path: '', component: Recommanded }
-                ]
-            }
+            { path: '', redirect: { path: 'hot' } },
+            { path: 'hot', component: Hot },
+            { path: 'in-theater', component: InTheater },
+            { path: 'coming-soon', component: ComingSoon },
+            { path: 'top250', component: Top250 },
+            { path: 'us-box', component: UsBox },
         ]
+    },
+    {
+        path: '/movie', component: Movie
+    },
+    {
+        path: '/celebrity', component: Celebrity
+    },
+    {
+        path: '/login', component: Login
     }
 ]
 
