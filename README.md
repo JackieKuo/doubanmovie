@@ -1,2 +1,2 @@
 # doubanmovie
-A simple web app base on douban movie API
+A simple web app base on Vuejs and douban movie API
